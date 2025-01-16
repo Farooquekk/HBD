@@ -1,0 +1,46 @@
+        body {
+            background-image: url('./bgi.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .clock {
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+            text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75);
+        }
+        .message {
+            font-size: 2rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            position: relative;
+            top: 50px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .helicopter {
+            position: absolute;
+            top: -100px;
+            left: -200px;
+            width: 250px;
+            animation: fly 5s linear infinite;
+            opacity: 0;
+            border-radius: 10px;
+        }
+        @keyframes fly {
+            0% { left: -200px; top: 50px; opacity: 1; }
+            50% { left: 50%; top: 20px; opacity: 1; }
+            100% { left: 110%; top: 50px; opacity: 1; }
+        }
+    
